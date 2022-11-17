@@ -1,11 +1,11 @@
-FROM python:3.9-alpine3.16
+FROM python:3.9-alpine3.13
 LABEL maintainer="apiproject.com"
 
 ENV PYTHONUNBUFFERED 1
 
-copy ./requirements.txt /tmp/requirements.txt
-copy ./requirements.dev.txt /tmp/requirements.dev.txt
-copy ./app /app
+COPY ./requirements.txt /tmp/requirements.txt
+COPY ./requirements.dev.txt /tmp/requirements.dev.txt
+COPY ./app /app
 WORKDIR /app
 EXPOSE 8080
 ARG DEV=false
