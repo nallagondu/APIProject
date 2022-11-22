@@ -7,7 +7,7 @@ COPY ./requirements.txt /tmp/requirements.txt
 COPY ./requirements.dev.txt /tmp/requirements.dev.txt
 COPY ./app /app
 WORKDIR /app
-EXPOSE 8082
+EXPOSE 8000
 ARG DEV=false
 RUN python -m venv /py && \
 /py/bin/pip install --upgrade pip && \
